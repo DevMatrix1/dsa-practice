@@ -50,3 +50,35 @@ class Solution {
 
     
 }
+
+// second approach-
+
+class Solution {
+	static int getElementIndex(int[] arr, int target) {
+        // add your logic here
+        int firstElement = arr[0], left=0, right=arr.length-1;
+    
+    while(left<=right)
+    {
+        int middle = (left+right)/2;
+        
+        if(arr[middle]==target)return middle;
+        
+        if(arr[middle]>target)
+        {
+            if(target<firstElement && arr[middle]>=firstElement)
+              left = middle + 1;
+
+            else right = middle - 1;
+        }
+        if(arr[middle]<target)
+        {
+            if(target>=firstElement && arr[middle]<firstElement)
+              right = middle - 1;
+
+            else left = middle + 1;
+        }
+    }
+    
+    return -1;
+	}
