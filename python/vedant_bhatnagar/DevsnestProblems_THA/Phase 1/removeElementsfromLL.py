@@ -13,3 +13,12 @@ def solve(head, key):
                 prev = ptr
                 ptr=ptr.next
     return head
+
+    #recursive approach
+    if not head:
+        return None
+    if head.data == key:
+        return solve(head.next, key)
+    ne = solve(head.next, key)
+    head.next = ne
+    return head

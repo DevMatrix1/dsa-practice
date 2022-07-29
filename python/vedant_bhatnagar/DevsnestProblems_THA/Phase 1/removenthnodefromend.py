@@ -22,4 +22,23 @@ def solve(head, n):
             prev = ptr
             ptr = ptr.next
         prev.next = ptr.next
+    return head 
+
+
+#single pass
+
+    p2 = p1 = head
+    prev = None
+    cnt = 1
+    while cnt != (n):
+        p1 = p1.next
+        cnt += 1
+    while p1.next:
+        prev = p2
+        p2 = p2.next
+        p1 = p1.next
+    if prev == None:
+        return head.next
+    else:
+        prev.next = prev.next.next
     return head    
