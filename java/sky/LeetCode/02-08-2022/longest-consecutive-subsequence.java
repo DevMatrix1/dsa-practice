@@ -8,9 +8,7 @@ class Solution {
         for(int num: nums){
             set.add(num);
         }
-        
-        System.out.println(set);
-        
+
         int ans = 0;
         int count = 0;
         for(int num: nums){
