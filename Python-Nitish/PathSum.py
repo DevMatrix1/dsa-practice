@@ -15,7 +15,3 @@ class Solution:
             issum = self.hasPathSum(root.right,targetSum,root.val+cursum,issum)
         
         return issum
-
-
-
-        
