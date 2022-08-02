@@ -16,34 +16,34 @@
  * }
  */
 //Approach 1
-// class Solution {
-//     public boolean helper(TreeNode root){
-//         if(root != null){
-//             boolean curr = root.val == 1;
-//             boolean l = helper(root.left);
-//             boolean r = helper(root.right);
+class Solution {
+    public boolean helper(TreeNode root){
+        if(root != null){
+            boolean curr = root.val == 1;
+            boolean l = helper(root.left);
+            boolean r = helper(root.right);
             
-//             if(!curr && !l && !r){
-//                 return false;
-//             }
+            if(!curr && !l && !r){
+                return false;
+            }
            
-//             if(l == false)
-//                 root.left = null;
+            if(l == false)
+                root.left = null;
             
-//             if(r == false)
-//                 root.right = null;
+            if(r == false)
+                root.right = null;
             
-//             return true;
-//         }
+            return true;
+        }
             
-//         return false;
-//     }   
+        return false;
+    }   
     
-//     public TreeNode pruneTree(TreeNode root) {
-//         boolean ifroot = helper(root);
-//         return ifroot? root: null;
-//     }    
-// }
+    public TreeNode pruneTree(TreeNode root) {
+        boolean ifroot = helper(root);
+        return ifroot? root: null;
+    }    
+}
 
 //Approach 2
 class Solution {
