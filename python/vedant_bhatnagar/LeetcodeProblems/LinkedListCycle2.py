@@ -37,3 +37,21 @@ class Solution(object):
         #             return ptr1
         # if ptr1==None or ptr2==None:
         #     return None
+
+        fast = slow = head
+        #floyd hare and tortoise algo
+        while fast and fast.next:
+            slow = slow.next
+            fast = fast.next.next
+            if fast == slow:
+                fast = head
+                break
+        #move fast and slow 1 1 place until they meet to reach the node where cycle begins
+        if fast and fast.next:
+            while fast != slow:     # if we need to remove cycle loop will be fast.next!=slow.next
+                fast = fast.next
+                slow = slow.next
+            return fast             # then slow.next = None
+        return None
+            
+            
