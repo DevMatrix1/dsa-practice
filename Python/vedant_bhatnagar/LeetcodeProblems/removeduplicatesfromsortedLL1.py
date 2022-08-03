@@ -20,4 +20,4 @@ class Solution(object):
                 l.next = r
                 l = r
         l.next = None
-        return 
+        return p
