@@ -26,14 +26,32 @@ class Solution(object):
             return None
         
         #Floyd tortoise and hare algo for detecting cycle
-        # if not head or not head.next:
-        #     return None
-        # ptr1=head
-        # ptr2=head.next
-        # while ptr1.next or ptr2.next.next:
-        #         ptr1 = ptr1.next
-        #         ptr2 = ptr2.next.next
-        #         if ptr1 == ptr2:
-        #             return ptr1
-        # if ptr1==None or ptr2==None:
-        #     return None
+        if not head or not head.next:
+            return None
+        ptr1=head
+        ptr2=head.next
+        while ptr1.next or ptr2.next.next:
+                ptr1 = ptr1.next
+                ptr2 = ptr2.next.next
+                if ptr1 == ptr2:
+                    return ptr1
+        if ptr1==None or ptr2==None:
+            return None
+
+        fast = slow = head
+        #floyd hare and tortoise algo
+        while fast and fast.next:
+            slow = slow.next
+            fast = fast.next.next
+            if fast == slow:
+                fast = head
+                break
+        #move fast and slow 1 1 place until they meet to reach the node where cycle begins
+        if fast and fast.next:
+            while fast != slow:     # if we need to remove cycle loop will be fast.next!=slow.next
+                fast = fast.next
+                slow = slow.next
+            return fast             # then slow.next = None
+        return None
+            
+            
