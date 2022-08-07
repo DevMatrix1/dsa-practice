@@ -16,6 +16,7 @@ for(int i=0;i<list1.size();i++){
 return 1;
 
 }
+// Adding and condition
 public static void addLeaves(TreeNode root,List<Integer> list){
     if(root==null) return;
     if(root.left==null && root.right==null){
