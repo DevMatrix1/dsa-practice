@@ -10,13 +10,12 @@ static boolean isBST(TreeNode root)
 {
     if(root == null) return true;
 
-    boolean left = isBST(root.left);
-
+    if(!isBST(root.left)) return false;
+    
     if(minimum < root.val) minimum = root.val;
     else return false;
 
-    boolean right = isBST(root.right);
+    if(!isBST(root.right)) return false;
 
-    if(left && right) return true;
-    else return false;
+    return true;
 }
