@@ -1,6 +1,6 @@
 //link: https://leetcode.com/problems/subsets/
 //Approach 1: used backtracking to get different pairs
-
+import java.util.*;
 class Solution {
     private void formSubsets(int idx, int n, List<List<Integer>> ans, List<Integer> cur_list, int[] nums){
         if(idx == n){
