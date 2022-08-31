@@ -22,6 +22,7 @@ public class GenerateParenthesis {
     }
 
     public static void main(String[] args) {
-        generateParenthesis(5);
+        List<String> ans = generateParenthesis(3);
+        System.out.println(ans);
     }
 }
