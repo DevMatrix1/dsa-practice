@@ -31,7 +31,8 @@ public class count_good_nodes_bt {
         return count + helper(root.left, Math.max(max, root.val)) + helper(root.right, Math.max(max, root.val));
     }
     public int goodNodes(TreeNode root) {
-        return helper(root, -10001);
+        //as n(no. of nodes) >= 1, we can pass root.val without checking
+        return helper(root, root.val);
     }
 
 }
