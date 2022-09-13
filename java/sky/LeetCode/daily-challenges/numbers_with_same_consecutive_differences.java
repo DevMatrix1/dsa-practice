@@ -1,6 +1,6 @@
 //link: https://leetcode.com/problems/numbers-with-same-consecutive-differences/
 
-//Approach: using DFS, making combinations 
+//Approach: using DFS, making combinations with every number from 1 to 9 and checking if second number can be added such that prev number and current number have a difference of k
 
 class Solution {
     private void dfs(int num, int prev, List<Integer> list, int n, int k, int times){
