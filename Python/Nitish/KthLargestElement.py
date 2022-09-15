@@ -11,7 +11,7 @@ def kthLargestElement(nums,k):
                 heapq.heappop(hp)
                 heapq.heappush(hp,ele)
     
-    return hp[0]
+    return hp[1]
 
 
 
