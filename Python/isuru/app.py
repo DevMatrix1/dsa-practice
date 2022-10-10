@@ -20,7 +20,6 @@ while True:
 
     if word in data:
         output = data[word]
-        #print(data[word])
     elif len(get_close_matches(word, data.keys()))>0:
         state = input("\nDid you mean %s instead? Enter Y is yes , or N if no: " % get_close_matches(word, data.keys())[0])
         if state == "Y":
