@@ -34,10 +34,9 @@
 ~ AND MANY MORE 
 
 ### Even you can submit your solution here.
-
-
 - Try to submit solutions in the language folders -> your_name.
 - If there is no folder of your programming language choice you can create one.
+- Add Clear and Concise commit messages.
 
 `Contributing`  🤝
 
