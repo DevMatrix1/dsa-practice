@@ -1,0 +1,14 @@
+//write the table of n
+
+#include <stdio.h>
+int main()
+{
+     int j;
+     puts("enter the number: ");
+     scanf("%d", &j);
+     printf("the table of %d is: \n", j);
+     for(int i = 1; i <= 10; i++){
+     printf("%ld\n", j * i);
+     }
+      return 0;
+}
