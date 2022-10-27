@@ -1,0 +1,29 @@
+/*
+1        1
+12      21  
+123    321 
+1234  4321
+1234554321
+*/
+#include<stdio.h>
+void main()
+{
+    int i,j,k,l,m;
+   for(i=1;i<=5;i++)
+    {
+        for(j=1;j<=i;j++)
+        {
+            printf("%d",j);
+        }
+        for(m=1;m<=(10-2*i);m++)
+        {
+            printf(" ");
+        }
+
+        for(l=i;l>=1;l--)
+        {
+            printf("%d",l);
+        }
+        printf("\n");
+    }    
+}
