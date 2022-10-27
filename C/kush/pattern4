@@ -1,0 +1,38 @@
+/*
+1) Input : n=3
+Output:
+***
+ *
+***
+2) Input : n=4
+Output:
+****
+  *
+ *
+****
+*/
+#include<stdio.h>
+void main()
+{
+    int i,n,j,k;
+    printf("Enter the number to print pattern:");
+    scanf("%d",&n);
+    for(i=1;i<=n;i++)
+    {
+        printf("*");
+    }
+    printf("\n");
+    for(k=1;k<=n-2;k++)
+    {
+          for(i=1;i<(n-k);i++)
+         {
+            printf(" ");
+         }
+             printf("*");
+     printf("\n");
+    }
+    for(i=1;i<=n;i++)
+    {
+        printf("*");
+    }
+}
