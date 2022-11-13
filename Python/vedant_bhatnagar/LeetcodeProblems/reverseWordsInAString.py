@@ -1,5 +1,10 @@
 Link - https://leetcode.com/problems/reverse-words-in-a-string/description/
   
+# Solution - One liner
+
+return (" ").join(s.strip().split()[::-1])
+  
+
 # Solution
 
 class Solution(object):
