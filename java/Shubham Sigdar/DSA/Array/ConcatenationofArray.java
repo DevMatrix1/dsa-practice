@@ -43,6 +43,7 @@ public class ConcatenationofArray {
 
     public static void main(String[] args) {
         int[] arr={0,1,2};
-        System.out.println(getConcatenation(arr));
+        int[] num= getConcatenation(arr);
+        System.out.println(num);
     }
 }
