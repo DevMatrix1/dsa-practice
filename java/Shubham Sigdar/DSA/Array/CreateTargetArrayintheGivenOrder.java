@@ -2,6 +2,9 @@ package DSA.Array;
 
 import java.util.ArrayList;
 
+//Doubt: arraylist
+
+
 //Given two arrays of integers nums and index. Your task is to create target array under the following rules:
 //
 //        Initially target array is empty.
