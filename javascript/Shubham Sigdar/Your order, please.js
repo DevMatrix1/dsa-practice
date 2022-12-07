@@ -17,7 +17,7 @@ function order(words){
       index=Number(element.match(regex));
       result[index-1]=element;
     }
-    console.log(result.join(" "));
+    console.log(result.join(" "))
   }
   order("")
   order("is2 Thi1s T4est 3a")
