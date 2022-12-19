@@ -1,20 +1,17 @@
-
-var kidsWithCandies = function(candies, extraCandies) {
-    let candies1=[];
-    for(let i=0;i<candies.length;i++){
-        let sum=candies[i]+extraCandies;
-        for(let j=0;j<candies.length;j++){
-            if(sum<candies[j]){
-                candies1.push(false)
-                break;
-            }
-        }
-        if(candies1[i]!==false){
-            candies1.push(true);
-        }
-        
-    }
-    console.log(candies1)
-    
+var numIdenticalPairs = function(nums) {
+    let map={};
+    let count=0;
+    nums.forEach(num=>{
+    //   console.log(map[num])
+      if(map[num]){
+        count+=map[num]
+    //    console.log(count)
+        map[num]++;
+      }else{
+        map[num]=1;
+      }
+    })
+  console.log(map)
+  console.log(count)
 };
-kidsWithCandies([2,3,5,1,3],3)
+numIdenticalPairs([1,2,3,1,1,3]);
