@@ -1,17 +1,17 @@
-var numIdenticalPairs = function(nums) {
-    let map={};
-    let count=0;
-    nums.forEach(num=>{
-    //   console.log(map[num])
-      if(map[num]){
-        count+=map[num]
-    //    console.log(count)
-        map[num]++;
-      }else{
-        map[num]=1;
-      }
-    })
-  console.log(map)
-  console.log(count)
-};
-numIdenticalPairs([1,2,3,1,1,3]);
+let total = 0;
+
+// console.log(input)
+document.querySelector('.positive').addEventListener('click',increase);
+document.querySelector('.negative').addEventListener('click',decrease);
+function increase(){
+  let input = document.getElementById("num").value;
+  total+=Number(input);
+  // console.log(total)
+  document.querySelector('.counter').innerText=total;
+}
+function decrease(){
+  let input = document.getElementById("num").value;
+  total-=Number(input);
+  // console.log(total)
+  document.querySelector('.counter').innerText=total;
+}
