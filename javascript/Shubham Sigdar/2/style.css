@@ -1,0 +1,38 @@
+.bigContainer{
+    /* border: 1px solid red; */
+    text-align: center;
+}
+.counter{
+    font-size: 200%;
+}
+.buttons{
+    /* border: 1px solid greenyellow; */
+    margin: 2%;
+    padding: 2%;
+}
+.negative{
+    background-color: #5affd8;
+    padding: 2%;
+}
+.positive{
+    background-color: #5affd8;
+    padding: 2%;
+}
+label{
+    font-size: 106%;
+    
+}
+.input{
+    /* border: 1px solid pink; */
+}
+#num{
+    width: 2rem;
+    height: 2rem;
+}
+
+.res{
+    padding: 1%;
+    margin: 3%;
+    background-color: #5affd8;
+    /* border: 1px solid yellowgreen; */
+}
