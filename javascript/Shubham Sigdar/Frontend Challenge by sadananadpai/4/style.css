@@ -1,6 +1,17 @@
-div{
+.divcreation{
     position: absolute;
-    height: 10px;
-    width: 50px;
-    background-color: aqua;
+    flex-direction: column;
+    gap: 0.5rem;
 }
+
+.adddiv{
+    gap: 0.5rem;
+    margin-top: 1%;
+    width: 200px;
+    /* position: absolute; */
+    padding: 0.5em;
+    background-color: pink;
+    border-radius: 0.25rem;
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
+}
+
