@@ -1,17 +1,13 @@
-.divcreation{
-    position: absolute;
+.container{
+    display: flex;
     flex-direction: column;
-    gap: 0.5rem;
+    width: 150px;
+    margin: 0 auto;
+    padding: 1px 0;
+    
+    /* border: 1px solid black; */
 }
-
-.adddiv{
-    gap: 0.5rem;
-    margin-top: 1%;
-    width: 200px;
-    /* position: absolute; */
-    padding: 0.5em;
-    background-color: pink;
-    border-radius: 0.25rem;
-    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
+.container>*{
+    margin-top: 20px;
 }
 
