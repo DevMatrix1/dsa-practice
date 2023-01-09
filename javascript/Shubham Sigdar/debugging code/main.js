@@ -1,10 +1,21 @@
-//Given :- array, always array have atleast 2no,all unique, ascending
-function firstNonConsecutive(arr){
-  for(let i=1;i<=arr.length;i++){
-    if(i!==arr[i]){
-      console.log(arr[i]);
+// Input: strs = ["flower","flow","flight"]
+// Output: "fl"
+// Input: strs = ["dog","racecar","car"]
+// Output: ""
+var longestCommonPrefix = function(strs) {
+    
+    let pre = strs[0];
+    
+    for(let word of strs) {
+                
+        for(let i = pre.length - 1; i >= 0; i--) {
+                             
+            if(pre[i] !== word[i]) {
+                pre = pre.slice(0, i);
+            }
+        }
     }
-  }
-  console.log(null);
-}
-firstNonConsecutive([1,2,3,4,5,6])
+    
+    return pre;
+};
+console.log(longestCommonPrefix(["flower","flow","flight"]))
