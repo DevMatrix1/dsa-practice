@@ -10,4 +10,13 @@
 .container>*{
     margin-top: 20px;
 }
+.dynamicdiv{
+    border: 1px solid black;
+    /* padding: 10px; */
+    position: absolute;
+    /* margin: 1%; */
+    width: 180px;
+    height: 30px;
+}
+
 
