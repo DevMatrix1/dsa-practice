@@ -1,24 +1,34 @@
-var generate = function(numRows) {
-    let rows=[];
-    if(numRows==1){
-      rows.push([1])
-    }else if(numRows==2){
-      rows.push([1])
-      rows.push([1,1])
-    }else if(numRows>2){
-      rows.push([1])
-      rows.push([1,1])
-      for(let i=2;i<numRows;i++){
-        let subArray = [];
-        subArray.push(1);
-        for(let j=0;j<rows[i-1].length-1;j++){
-          subArray.push(rows[i-1][j]+rows[i-1][j+1])
-        }
-        subArray.push(1);
-        rows.push(subArray)
+var nextGreaterElement = function(nums1, nums2) {
+  // O (n + m)
+  let nums1Idx = new Map(); {
+      let idx = 0;
+      for(const n of nums1)
+          nums1Idx.set(n, idx++);
+  }
+  let res = [];
+  for(let i = 0; i < nums1.length; i++)
+      res.push(-1);
+  
+  let stack = [];
+  for(let i = 0; i < nums2.length; i++) {
+      let cur = nums2[i];
+      
+      // while stack is not empty and current is greater than the top of the stack
+      while(stack.length > 0 && cur > stack[stack.length - 1]) {
+          let val = stack.pop();
+          let idx = nums1Idx.get(val);
+          res[idx] = cur;
       }
       
-    }
-    return rows
-  };
-  generate(5)
+      if(nums1Idx.has(cur))
+          stack.push(cur);
+  }
+  
+  return res;
+};
+nextGreaterElement([4,1,2],[1,3,4,2])
+// nums1 = , nums2 = 
+
+
+
+
