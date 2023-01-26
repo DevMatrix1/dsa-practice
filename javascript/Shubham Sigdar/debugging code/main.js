@@ -1,22 +1,20 @@
-var maxNumberOfBalloons = function(text) {
-
-    const  balloonCach = {};
-    const ballonSet = new Set(text.split(''));
-    // console.log(ballonSet)
-    for (const char of text) {
-      if (!ballonSet.has(char)) continue;
-
-        const count = ((balloonCach[char] ?? 0) + 1)
-        // console.log(count)
-        balloonCach[char] = count;
+var wordPattern = function(pattern, s) {
+  let p1=pattern.split('');
+  console.log(p1);
+  let s1=s.split(' ');
+  console.log(s1);
+  if(p1.length!=s1.length){
+    return false;
+  }
+  let map1=new Map();
+  let map2=new Map();
+  for(let i=0;i<p1.length;i++){
+      map1.set(p1[i],s1[i])
+      map2.set(s1[i],p1[i])
     }
-
-    let min = Math.min(balloonCach['b'], 
-                        balloonCach['a'], 
-                        balloonCach['n'], 
-                        Math.floor(balloonCach['l']/2), 
-                        Math.floor(balloonCach['o']/2));
-    
-    return min ? min : 0;
+   }
+   console.log(map1)
+  console.log(map2)
+  
 };
-console.log(maxNumberOfBalloons("nlaebolko"))
+console.log(wordPattern("abba","dog dog dog dog"))
