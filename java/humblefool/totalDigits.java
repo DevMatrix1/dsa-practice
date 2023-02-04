@@ -20,7 +20,7 @@ public class totalDigits {
         {
             return 1;
         }
-        String str=Long.toString(n);//converting string into a long integer 
+        String str=Long.toString(n);//converting long integer into a string c
         return str.length()+totalDigits(n-1);//here we are applying recurrsion to reach n to 1
    }
 }
