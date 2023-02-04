@@ -5,6 +5,13 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "type": "java",
+            "name": "Launch Chaining",
+            "request": "launch",
+            "mainClass": "Chaining",
+            "projectName": "dsa-practice-form-devmatrix_fbc4fae2"
+        },
+        {
             "type": "chrome",
             "request": "launch",
             "name": "Launch Chrome against localhost",
