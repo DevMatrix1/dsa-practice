@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch shuffleArray",
+            "request": "launch",
+            "mainClass": "shuffleArray",
+            "projectName": "dsa-practice-form-devmatrix_fbc4fae2"
+        },
+        {
+            "type": "java",
             "name": "Launch Chaining",
             "request": "launch",
             "mainClass": "Chaining",
