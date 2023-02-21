@@ -8,7 +8,6 @@ Example :-
         Input :-- nums = [1,3,5,6], target = 5
         Output :-- 2.
  */
-package humblefool;
 
 import java.util.Scanner;
 public class searchInsertPosition {

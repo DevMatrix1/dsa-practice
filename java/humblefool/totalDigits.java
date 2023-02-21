@@ -5,7 +5,6 @@
  * Explanation: There are total 17 digits required to write all numbers from 1 to 13.
  */
 
-package humblefool;
 import java.util.Scanner;
 public class totalDigits {
     public static void main(String[] args) {
