@@ -1,18 +1,12 @@
-function sumOfDifferences(arr) {
-    if(arr.length==0){
-      return 0;
-    }else{
-        let arr1=arr.sort((a,b)=>b-a)
-    // console.log(arr1)
-    let sum=0
-    let diff;
-    for(let i=0;i<arr1.length-1;i++){
-      diff=arr1[i]-arr1[i+1];
-      sum += diff;
+function multipleOfIndex(array) {
+  let arr1=array.slice(1)
+  let arr2=[] 
+  // console.log(arr1)
+  for(let i=1;i<=arr1.length;i++){
+    if(arr1[i]%i === 0){
+      arr2.push(arr1[i])
     }
-    return sum
-    }
-    
-   
+  }
+  console.log(arr2)
 }
-console.log(sumOfDifferences([2, 1, 10,17]))
+console.log(multipleOfIndex([22, -6, 32, 82, 9, 25]))
